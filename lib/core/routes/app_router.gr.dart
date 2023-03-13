@@ -29,17 +29,33 @@ class _$AppRouter extends RootStackRouter {
         child: const DashboardPage(),
       );
     },
+    ForgotPasswordRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+        routeData: routeData,
+        child: const ForgotPasswordPage(),
+      );
+    },
   };
 
   @override
   List<RouteConfig> get routes => [
+        RouteConfig(
+          '/#redirect',
+          path: '/',
+          redirectTo: '/login',
+          fullMatch: true,
+        ),
         RouteConfig(
           LoginRoute.name,
           path: '/login',
         ),
         RouteConfig(
           DashboardRoute.name,
-          path: '/',
+          path: '/dashboard',
+        ),
+        RouteConfig(
+          ForgotPasswordRoute.name,
+          path: '/forgot-password',
         ),
       ];
 }
@@ -62,8 +78,20 @@ class DashboardRoute extends PageRouteInfo<void> {
   const DashboardRoute()
       : super(
           DashboardRoute.name,
-          path: '/',
+          path: '/dashboard',
         );
 
   static const String name = 'DashboardRoute';
+}
+
+/// generated route for
+/// [ForgotPasswordPage]
+class ForgotPasswordRoute extends PageRouteInfo<void> {
+  const ForgotPasswordRoute()
+      : super(
+          ForgotPasswordRoute.name,
+          path: '/forgot-password',
+        );
+
+  static const String name = 'ForgotPasswordRoute';
 }

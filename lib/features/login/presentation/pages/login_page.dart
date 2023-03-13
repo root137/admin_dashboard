@@ -2,11 +2,13 @@
 
 import 'package:admin_dashboard/core/constants/routes_constants.dart';
 import 'package:admin_dashboard/core/theme/app_colors.dart';
-import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
+///
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  ///
+  const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -30,7 +32,6 @@ class _LoginPageState extends State<LoginPage> {
               image: DecorationImage(
                 image: AssetImage('assets/images/space.jpg'),
                 fit: BoxFit.cover,
-                alignment: Alignment.center,
               ),
             ),
             child: Column(
@@ -45,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 2,
                         blurRadius: 5,
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -115,7 +116,11 @@ class _LoginPageState extends State<LoginPage> {
                                   const SizedBox(height: 10),
                                   Align(
                                     child: TextButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        AutoRouter.of(context).replaceNamed(
+                                          RouteConstants.forgotPassword,
+                                        );
+                                      },
                                       style: TextButton.styleFrom(
                                         foregroundColor: LightColor.grey,
                                       ),
@@ -147,6 +152,7 @@ class _LoginPageState extends State<LoginPage> {
         border: OutlineInputBorder(),
         hintText: 'Your Email Address',
       ),
+
       // validator: (value) {
       //   if (value == null || value.isEmpty) {
       //     return 'Please enter any text';
@@ -164,17 +170,19 @@ class _LoginPageState extends State<LoginPage> {
 
   TextFormField _buildPasswordField() {
     return TextFormField(
+      obscureText: true,
+      obscuringCharacter: '*',
       controller: _passwordController,
       style: Theme.of(context).textTheme.bodySmall,
       decoration: const InputDecoration(
         border: OutlineInputBorder(),
         hintText: 'Your Password',
       ),
-      validator: (value) {},
+      // validator: (value) {},
     );
   }
 
-  _buildLoginButton() {
+  ElevatedButton _buildLoginButton() {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         foregroundColor: LightColor.background,
@@ -191,7 +199,7 @@ class _LoginPageState extends State<LoginPage> {
       child: const Text(
         'SIGN IN',
         style: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontSize: 15,
           letterSpacing: 2,
           fontWeight: FontWeight.w400,

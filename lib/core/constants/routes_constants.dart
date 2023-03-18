@@ -7,5 +7,5 @@ class RouteConstants {
   static const String dashboard = '/dashboard';
 
   ///forgot password route
-  static const String forgotPassword = '/forgot-password';
+  static const String forgotPassword = '/forgot_password';
 }

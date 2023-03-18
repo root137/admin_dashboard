@@ -19,10 +19,6 @@ part 'app_router.gr.dart';
       path: RouteConstants.dashboard,
       page: DashboardPage,
     ),
-    AutoRoute(
-      path: RouteConstants.forgotPassword,
-      page: ForgotPasswordPage,
-    )
   ],
 )
 

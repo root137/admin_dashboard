@@ -1,10 +1,10 @@
 import 'package:admin_dashboard/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
-///
-class CategoriesPage extends StatelessWidget {
-  ///
-  const CategoriesPage({super.key});
+///setting page
+class SettingPage extends StatelessWidget {
+  ///constructor
+  const SettingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CategoriesPage extends StatelessWidget {
       ),
       child: const Center(
         child: Text(
-          'CATEGORIES PAGE',
+          'SETTING PAGE',
           style: TextStyle(
             color: LightColor.onBackground,
             fontSize: 20,

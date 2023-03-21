@@ -194,7 +194,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       onPressed: () {
-        AutoRouter.of(context).replaceNamed(RouteConstants.dashboard);
+        AutoRouter.of(context).replaceNamed(RouteConstants.home);
       },
       child: const Text(
         'SIGN IN',

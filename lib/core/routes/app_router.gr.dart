@@ -23,6 +23,12 @@ class _$AppRouter extends RootStackRouter {
         child: const LoginPage(),
       );
     },
+    HomeRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+        routeData: routeData,
+        child: const HomePage(),
+      );
+    },
     DashboardRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
         routeData: routeData,
@@ -44,6 +50,10 @@ class _$AppRouter extends RootStackRouter {
           path: '/login',
         ),
         RouteConfig(
+          HomeRoute.name,
+          path: '/home',
+        ),
+        RouteConfig(
           DashboardRoute.name,
           path: '/dashboard',
         ),
@@ -60,6 +70,18 @@ class LoginRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'LoginRoute';
+}
+
+/// generated route for
+/// [HomePage]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute()
+      : super(
+          HomeRoute.name,
+          path: '/home',
+        );
+
+  static const String name = 'HomeRoute';
 }
 
 /// generated route for

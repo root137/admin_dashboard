@@ -1,6 +1,6 @@
 import 'package:admin_dashboard/core/constants/routes_constants.dart';
 import 'package:admin_dashboard/features/dashboard/presentation/pages/dashboard_page.dart';
-import 'package:admin_dashboard/features/forgot%20password/presentation/pages/forgot_password_page.dart';
+import 'package:admin_dashboard/features/home/presentation/pages/home_page.dart';
 
 import 'package:admin_dashboard/features/login/presentation/pages/login_page.dart';
 import 'package:auto_route/auto_route.dart';
@@ -14,6 +14,10 @@ part 'app_router.gr.dart';
       path: RouteConstants.login,
       page: LoginPage,
       initial: true,
+    ),
+    AutoRoute(
+      path: RouteConstants.home,
+      page: HomePage,
     ),
     AutoRoute(
       path: RouteConstants.dashboard,

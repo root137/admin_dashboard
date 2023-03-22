@@ -5,6 +5,7 @@ import 'package:admin_dashboard/core/theme/app_colors.dart';
 import 'package:admin_dashboard/features/categories/presentation/pages/categories_page.dart';
 import 'package:admin_dashboard/features/customers/presentation/pages/customers_page.dart';
 import 'package:admin_dashboard/features/dashboard/presentation/pages/dashboard_page.dart';
+import 'package:admin_dashboard/features/home/presentation/widgets/search_bar_widget.dart';
 import 'package:admin_dashboard/features/products/presentation/pages/products_page.dart';
 import 'package:admin_dashboard/features/setting/presentation/pages/setting_page.dart';
 import 'package:auto_route/auto_route.dart';
@@ -156,47 +157,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         const Spacer(),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: DecoratedBox(
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 5,
-                                    offset: const Offset(0, 3),
-                                  ),
-                                ],
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: TextFormField(
-                                decoration: const InputDecoration(
-                                  hintText: ' Search...',
-                                  border: InputBorder.none,
-                                  suffixIcon: Icon(Icons.search),
-                                  contentPadding: EdgeInsets.symmetric(
-                                    vertical: 15,
-                                    horizontal: 20,
-                                  ),
-                                  hintStyle: TextStyle(
-                                    color: Color.fromARGB(255, 186, 184, 184),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                  prefixIcon: Icon(
-                                    Icons.filter_list,
-                                    size: 24,
-                                    color: Color.fromARGB(255, 186, 184, 184),
-                                  ),
-                                  filled: false,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        const SearchBarWidget(),
                         const Spacer(),
                         Padding(
                           padding: const EdgeInsets.all(16),

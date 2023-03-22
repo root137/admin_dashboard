@@ -36,10 +36,27 @@
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = null;
   </script>
+  
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <!-- Firebase Config -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyB8zMDtRFBQiBJTDhfMbJQLf2WkfSD5ofU",
+  authDomain: "ar-furniture-app-74112.firebaseapp.com",
+  projectId: "ar-furniture-app-74112",
+  storageBucket: "ar-furniture-app-74112.appspot.com",
+  messagingSenderId: "549241961575",
+  appId: "1:549241961575:web:b975ceaa3ac39be419e8c2",
+  measurementId: "G-2ZJ3C259WL"
+};
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js

@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           NavigationRail(
+            groupAlignment: 0.1,
             backgroundColor: const Color.fromARGB(255, 226, 221, 221),
             minWidth: 120,
             useIndicator: true,
@@ -80,7 +81,7 @@ class _HomePageState extends State<HomePage> {
               height: 120,
               child: Image.asset(
                 'assets/images/chair.png',
-                height: 50,
+                height: 40,
                 width: 50,
               ),
             ),
